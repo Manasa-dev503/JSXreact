@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="dd"></div>
+    <div id="df"></div>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <div id="d6"></div>
+    <div id="d7"></div>
+    <div id="d8"></div>
+    <div id="d9"></div>
+    <div id="d10"></div>
+    <div id="d11"></div>
+    <div id="d12"></div>
+    <div id="d13"></div>
+    <div id="d14"></div>
+    <script type="text/babel">
+
+        var X = function abc(){
+            var [x,setx] = React.useState(["manasa","smiley","priya"])
+            return (
+                <div>
+                    {
+                        x.sort((a,b)=>{return a<b?-1:1}).map((a)=>{
+                            return <li>{a}</li>
+                        })
+                    }
+                    </div>
+            )
+        }
+        ReactDOM.render(<X/>,document.getElementById('dd'))
+
+        var Y = function abc(){
+            var [x,setx] = React.useState(["manasa","smiley","priya"])
+            return (
+                <div>
+                    {
+                        x.sort((a,b)=>{return a<b?-1:1}).map((a)=>{
+                            return <li>{a.length}</li>
+                        })
+                    }
+                    </div>
+            )
+        }
+        ReactDOM.render(<Y/>,document.getElementById('df'))
+
+
+        var Z = function abc(){
+            var [x,setx] = React.useState([1,34,2,56,7])
+            return (
+                <div>
+                    {
+                        x.map((a)=>{
+                            return <li>{a}</li>
+                        })
+                    }
+                    </div>
+            )
+        }
+        ReactDOM.render(<Z/>,document.getElementById('d1'))
+
+        var A = function abc(){
+            var [x,setx] = React.useState(["app","apple","banana","mangos"])
+            return (
+                <div>
+                    {
+                        x.map((a)=>{
+                            return <li>{(a.length%2===0)?<b>{a}</b>:<i>{a}</i>}</li>
+                        })
+                    }
+                    </div>
+            )
+        }
+        ReactDOM.render(<A/>,document.getElementById('d2'))
+
+        var B = function abc(){
+            var [x,setx] = React.useState([
+                {
+                    firstname:"manasa",
+                    lastname:"bathina",
+                    age:22
+                },
+                {
+                    firstname:"kavya",
+                    lastname:"chowdary",
+                    age:25
+
+                },
+                {
+                    firstname:"priyanka",
+                    lastname:"reddy",
+                    age:28
+                }
+            ])
+            return (
+                <div>
+                    {
+                        <table border="1">
+                            <thead>
+                                
+                                </thead>
+                                <tbody>
+                                    {
+                                        x.map((a)=>{
+                                            return <tr><td>{a.firstname}</td><td>{a.lastname}</td><td>{a.age}</td></tr>
+
+                                        })
+                                    }
+                                    </tbody>
+
+
+                            </table>
+
+
+                    }
+                    </div>
+            )
+        }
+        ReactDOM.render(<B/>,document.getElementById('d3'))
+
+
+
+        var C = function abc(){
+            var [x,setx] = React.useState([
+                {
+                    firstname:"manasa",
+                    lastname:"bathina",
+                    age:22,
+                    im : <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzcAByzY5muXsOopw_XOOa_ae5GU7fAKgw4A&usqp=CAU" width="100px"/>,
+                },
+                {
+                    firstname:"kavya",
+                    lastname:"chowdary",
+                    age:25,
+                    im : <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzcAByzY5muXsOopw_XOOa_ae5GU7fAKgw4A&usqp=CAU" width="100px"/>,
+
+
+
+                },
+                {
+                    firstname:"priyanka",
+                    lastname:"reddy",
+                    age:28,
+                    im : <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzcAByzY5muXsOopw_XOOa_ae5GU7fAKgw4A&usqp=CAU" width="100px"/>,
+
+
+                }
+            ])
+        
+            return (
+                <div>
+                    {
+                        <table border="1">
+                            <thead>
+                                
+                                </thead>
+                                <tbody>
+                                    {
+                                        x.map((a)=>{
+                                            return <tr><td>{a.firstname}</td><td>{a.lastname}</td><td>{a.age}</td><td>{a.im}</td></tr>
+
+                                        })
+                                    }
+                                    </tbody>
+
+
+                            </table>
+
+
+                    }
+                    </div>
+            )
+                }
+        ReactDOM.render(<C/>,document.getElementById('d4'))
+
+
+        var D = function abc(){
+            var [x,setx] = React.useState([1,34,2,56,7])
+            return (
+                <div>
+                    {
+                        x.sort((a,b)=>{return a<b?-1:1}).map((a)=>{
+                            return <li>{a}</li>
+                        })
+                    }
+                    </div>
+            )
+        }
+        ReactDOM.render(<D/>,document.getElementById('d5'))
+
+
+        var E = function abc(){
+            var [x,setx] = React.useState([1,34,2,56,7,[12,23,67],78])
+            return (
+                <div>
+                    {
+                        x.flat().map((a)=>{
+                            return <li>{a}</li>;
+                        })
+                    }
+                    </div>
+            )
+        }
+        ReactDOM.render(<E/>,document.getElementById('d6'))
+
+        var F= function abc(){
+            var [x,setx] = React.useState(["manasa","smiley","gopi"])
+            return (
+                <div>
+                    {
+                        x.map((a)=>{
+                            return <h1>{a.slice(0,1)}</h1>
+                        })
+                    }
+                    </div>
+            )
+        }
+        ReactDOM.render(<F/>,document.getElementById('d7'))
+
+        var G = function abc(){
+            var [x,setx] = React.useState(["app","appLe","banana","mAngos"])
+            return (
+                <div>
+                    {
+                        x.map((a)=>{
+                            return <li>{a.toLowerCase()}</li>
+                        })
+                    }
+                    </div>
+            )
+        }
+        ReactDOM.render(<G/>,document.getElementById('d8'))
+
+
+        var H = function abc(){
+            var [x,setx] = React.useState(["app","appLe","banana","mAngos"])
+            return (
+                <div>
+                    {
+                        x.map((a)=>{
+                            return <li>{a.split('').reverse().join('')}</li>
+                        })
+                    }
+                    </div>
+            )
+        }
+        ReactDOM.render(<H/>,document.getElementById('d10'))
+
+
+        var I = function abc(){
+            var [x,setx] = React.useState([<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2navq63ryfxWVOG8BNbPr6EOxuRLSugKg1w&usqp=CAU" width="100px"/>,<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAhj__j3-YktBbet4U1i2eUANYCj6UH7zzPw&usqp=CAU" width="100px"/>,<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBtKIbkpjl_Nfc3nlvqT0-bR_-zU2LwU3mpA&usqp=CAU" width="100px"/>])
+            return (
+                <div>
+                    {
+                        x.map((a)=>{
+                            return a;
+                        })
+                    }
+                    </div>
+            )
+        }
+        ReactDOM.render(<I/>,document.getElementById('d11'))
+
+
+        var J = function abc(){
+            var [x,setx] = React.useState([<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2navq63ryfxWVOG8BNbPr6EOxuRLSugKg1w&usqp=CAU" width="100px"/>,<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAhj__j3-YktBbet4U1i2eUANYCj6UH7zzPw&usqp=CAU" width="100px"/>,<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBtKIbkpjl_Nfc3nlvqT0-bR_-zU2LwU3mpA&usqp=CAU" width="100px"/>])
+            return (
+                <div>
+                    {
+                        x.map((a)=>{
+                            return <li>{a}</li>;
+                        })
+                    }
+                    </div>
+            )
+        }
+        ReactDOM.render(<J/>,document.getElementById('d12'))
+
+        var K = function abc(){
+            var [x,setx] = React.useState([<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2navq63ryfxWVOG8BNbPr6EOxuRLSugKg1w&usqp=CAU" width="100px"/>,<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAhj__j3-YktBbet4U1i2eUANYCj6UH7zzPw&usqp=CAU" width="100px"/>,<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBtKIbkpjl_Nfc3nlvqT0-bR_-zU2LwU3mpA&usqp=CAU" width="100px"/>])
+            return (
+                <div>
+                    {
+                    <table>
+                        {
+                            x.map((a)=>{
+                                return <td>{a}</td>
+
+                            })
+                        }
+                        </table>
+                        
+                    }
+                    </div>
+            )
+        }
+        ReactDOM.render(<K/>,document.getElementById('d13'))
+
+        var L = function abc(){
+            var [x,setx] = React.useState(
+                {
+                    firstname:"manasa",
+                    lastname:"bathina",
+                    age:22
+                }
+            )
+            return (
+                <div>
+                    {
+                    <table>
+                        {
+                            Object.entries(x).map((a)=>{
+                                return <h1>{a[0]}:{a[1]}</h1>
+
+                            })
+                        }
+                        </table>
+                        
+                    }
+                    </div>
+            )
+        }
+        ReactDOM.render(<L/>,document.getElementById('d14'))
+
+
+
+
+
+
+
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d3"></div>
+    <script type="text/babel">
+    var B = function abc(){
+        var [x,setx] = React.useState([
+                {
+                    firstname:"manasa",
+                    lastname:"bathina",
+                    age:22,
+                    btn:<button>Delete</button>
+                },
+                {
+                    firstname:"kavya",
+                    lastname:"chowdary",
+                    age:25,
+                    btn:<button>Delete</button>
+
+
+                },
+                {
+                    firstname:"priyanka",
+                    lastname:"reddy",
+                    age:28,
+                    btn:<button>Delete</button>
+
+                },
+                {
+                    firstname:"sony",
+                    lastname:"priya",
+                    age:28,
+                    btn:<button>Delete</button>
+
+                }
+            ])
+            return (
+                <div>
+                    {
+                        <table border="1">
+                            <thead>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <th>Age</th>
+                                <th>Options</th>
+                            </thead>
+                            <tbody>
+                                {
+                                    x.map((a)=>{
+                                        return <tr><td>{a.firstname}</td><td>{a.lastname}</td><td>{a.age}</td><td>{a.btn}</td></tr>
+                                    })
+                                }
+                                </tbody>
+                                </table>
+                            }
+                            </div>
+                            )
+                        }
+                        ReactDOM.render(<B/>,document.getElementById('d3'))
+
+    </script>
+    
+</body>
+</html>

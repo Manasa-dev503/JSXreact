@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="d1"></div>
+    <h1 id="d2"></h1>
+    <h1 id="d3"></h1>
+    <h1 id="d4"></h1>
+    <div id="d5"></div>
+
+    <script type="text/babel">
+        var x = <h1>This is JSX</h1>
+        ReactDOM.render(x,document.getElementById('d1'))
+        var y = <h1>Welcome to React</h1>
+        ReactDOM.render(x,document.getElementById('d1'))
+        ReactDOM.render(y,document.getElementById('d1'))
+        var z = <h1>30</h1>
+        ReactDOM.render(z,document.getElementById('d1'))
+        var a = "manasa"
+        var b = "bathina"
+        ReactDOM.render(a+b,document.getElementById('d2'))
+        ReactDOM.render(a,document.getElementById('d3'))
+
+
+        var X = function abc(){
+            var [ar,setar] = React.useState([10,20,30,40])
+            return (
+                <div>
+                    <h2>{ar.map((a)=>{
+                        return (<h2>{a}</h2>)
+                    })
+                }
+                </h2>
+                </div>
+                )
+            }
+            ReactDOM.render(<X/>,document.getElementById('d1'))
+
+
+        var Y = function def(){
+            var [br,setbr] = React.useState(["manasa","smiley","kavya"])
+            return(
+                <div>
+                    <h2>{br.map((a)=>{
+                        return (<h2>{a.slice(0,2)}</h2>)
+                    })}
+                        </h2>
+                    </div>
+            )
+        }
+        ReactDOM.render(<Y/>,document.getElementById('d5'))
+
+
+
+        
+        
+
+        
+
+        /*var br = ["manasa","smiley","kavya"]
+        {
+            br.map((b)=>{
+                return b.slice(0,2)
+            })
+            
+
+        }
+        ReactDOM.render(br,document.getElementById('d4'))*/
+
+        
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

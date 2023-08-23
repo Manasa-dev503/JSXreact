@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <script type="text/babel">
+        var X = function abc(){
+            function pqr(){
+                console.log(document.getElementById('dd').value)
+            }
+            return (
+                <div>
+                    <input type="text" id="dd"/>
+                    <button onClick={pqr}>Click here to see alert</button>
+                </div>
+            
+           
+            )
+            
+        }
+        ReactDOM.render(<X/>,document.getElementById('d1'))
+
+        var Y = function abc(){
+            function mno(){
+                document.getElementById('df').innerHTML = document.getElementById('dd').value
+            }
+            return (
+                <div>
+                    <input type="text" id="dd"/>
+                    <button onClick={mno}>Click here to see alert</button>
+                    <h1 id="df"></h1>
+                </div>
+                )
+        }
+        ReactDOM.render(<Y/>,document.getElementById('d2'))
+
+    </script>
+    
+</body>
+</html>

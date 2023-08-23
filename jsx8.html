@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <div id="d6"></div>
+    <div id="d7"></div>
+    <div id="d8"></div>
+    <div id="d9"></div>
+    <div id="d10"></div>
+    <script type="text/babel">
+        var A = function abc(){
+            return (
+                <div>
+                    {
+                        <h1 style={{color:"red"}}>Welcome to Edupoly</h1>
+                    }
+                    </div>
+            )
+
+        }
+        ReactDOM.render(<A/>,document.getElementById('d1'))
+
+        var B = function abc(){
+            return (
+                <div>
+                    {
+                        <h1 style={{color:"red",backgroundColor:"green"}}>Hello Edupoly</h1>
+                    }
+                    </div>
+            )
+
+        }
+        ReactDOM.render(<B/>,document.getElementById('d2'))
+        
+        var C = function abc(){
+            return (
+                <div>
+                    {
+                        <h1 style={{color:"maroon"}}>Hello Edupoly</h1>
+                    }
+                    </div>
+            )
+        }
+        ReactDOM.render(<C/>,document.getElementById('d3'))
+
+        var D = function abc(){
+            var [x,setx] = React.useState(["manasa","smiley","kavya","priya"])
+            return (
+                <div style={{display:"flex"}}>
+                    {
+                        x.map((a)=>{
+                            return <div style={{border:"1px solid",margin:"10px"}}>{a}</div>
+                        })
+                    }
+                    </div> 
+            )
+                }
+                
+                ReactDOM.render(<D/>,document.getElementById('d4'))
+
+        var E = function abc(){
+            var [x,setx] = React.useState(
+                {
+                firstname : "manasa",
+                lastname : "bathina",
+                age : 22
+                } 
+            )
+            return (
+                <div style={{border:"1px solid"}}>
+                    {
+                        <div>
+                        <h1>Firstname:{x.firstname}</h1>
+                        <h5>Lastname:{x.lastname}</h5>
+                        <i>Age:{x.age}</i>
+                        </div>
+                    }
+
+                    </div>
+            )
+        }
+        ReactDOM.render(<E/>,document.getElementById('d5'))
+
+        var F = function abc(){
+            var [x,setx] = React.useState([
+                {
+                    FirstName : "Manasa",
+                    LastName : "Bathina",
+                    Age : 22,
+                    Gender : "female"
+                },
+                {
+                    FirstName : "Smiley",
+                    LastName : "Chowdary",
+                    Age : 22,
+                    Gender : "female"
+                },
+                {
+                    FirstName : "Gopi",
+                    LastName : "Chowdary",
+                    Age : 25,
+                    Gender : "male"
+                },
+                {
+                    FirstName : "Mahesh",
+                    LastName : "Chowdary",
+                    Age : 25,
+                    Gender : "male"
+                },
+            ])
+            return (
+                <div>
+                    {
+                        x.map((a)=>{
+                            return <div style={{border:"1px solid",margin:"10px",width:"300px"}}>
+                                <div style={(a.Gender==="female")?{backgroundColor:"pink"}:{backgroundColor:"skyblue"}}>
+                                    <h1>
+                                    FirstName:{a.FirstName}<br></br>
+                                    LastName:{a.LastName}<br></br>
+                                    Gender:{a.Gender}<br></br>
+                                    Age:{a.Age}<br></br>
+                                    </h1>
+                                </div>
+                               
+                                
+                            </div>
+                                
+                               
+                                
+                                    
+                            
+                        })
+                    }
+
+
+                    </div>
+            )
+        }
+        ReactDOM.render(<F/>,document.getElementById('d6'))
+
+
+
+        var G = function abc(){
+            var [x,setx] = React.useState([
+                {
+                    FirstName : "Manasa",
+                    LastName : "Bathina",
+                    Age : 22,
+                    Gender : "female",
+                    im: <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzcAByzY5muXsOopw_XOOa_ae5GU7fAKgw4A&usqp=CAU"/>
+                },
+                {
+                    FirstName : "Smiley",
+                    LastName : "Chowdary",
+                    Age : 22,
+                    Gender : "female",
+                    im : <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzcAByzY5muXsOopw_XOOa_ae5GU7fAKgw4A&usqp=CAU"/>
+                },
+                {
+                    FirstName : "Gopi",
+                    LastName : "Chowdary",
+                    Age : 25,
+                    Gender : "male",
+                    im : <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzcAByzY5muXsOopw_XOOa_ae5GU7fAKgw4A&usqp=CAU"/>
+                },
+                {
+                    FirstName : "Mahesh",
+                    LastName : "Chowdary",
+                    Age : 25,
+                    Gender : "male",
+                    im : <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzcAByzY5muXsOopw_XOOa_ae5GU7fAKgw4A&usqp=CAU"/>
+                },
+            ])
+            return (
+                <div>
+                    {
+                        x.map((a)=>{
+                            return <div style={{border:"1px solid",margin:"10px",width:"300px"}}>
+                                <div style={(a.Gender==="female")?{backgroundColor:"pink"}:{backgroundColor:"skyblue"}}>
+                                    <h1>
+                                    FirstName:{a.FirstName}<br></br>
+                                    LastName:{a.LastName}<br></br>
+                                    Gender:{a.Gender}<br></br>
+                                    Age:{a.Age}<br></br>
+                                    {a.im}
+                                    </h1>
+                                </div>
+                               
+                                
+                            </div>
+                                
+                               
+                                
+                                    
+                            
+                        })
+                    }
+
+
+                    </div>
+            )
+        }
+        ReactDOM.render(<G/>,document.getElementById('d7'))
+
+        var H = function abc(){
+            var [x,setx] = React.useState([
+                {
+                    FirstName : "Manasa",
+                    LastName : "Bathina",
+                    Age : 22,
+                    Gender : "female"
+                },
+                {
+                    FirstName : "Smiley",
+                    LastName : "Chowdary",
+                    Age : 22,
+                    Gender : "female"
+                },
+                {
+                    FirstName : "Gopi",
+                    LastName : "Chowdary",
+                    Age : 25,
+                    Gender : "male"
+                },
+                {
+                    FirstName : "Mahesh",
+                    LastName : "Chowdary",
+                    Age : 25,
+                    Gender : "male"
+                },
+            ])
+            return (
+                <div>
+                    {
+                        <table border="1">
+                            <thead></thead>
+                            <tbody>
+                                {
+                                    x.map((a)=>{
+                                        return <tr style={(a.Gender==="female")?{backgroundColor:"pink"}:null}><td>{a.FirstName}</td><td>{a.LastName}</td><td>{a.Age}</td><td>{a.Gender}</td></tr>
+                                    })
+                                }
+                                
+                                
+                                
+                                </tbody>
+
+                            </table>
+                    }
+                   
+
+
+                    </div>
+            )
+        }
+        ReactDOM.render(<H/>,document.getElementById('d8'))
+
+        var I = function abc(){
+            return (
+                <h1 style={{border:"30px solid black"}}>Hello Edupoly</h1>
+            )
+        }
+        ReactDOM.render(<I/>,document.getElementById('d9'))
+
+
+        var J = function abc(){
+            var [x,setx] = React.useState([
+                {
+                    FirstName : "Manasa",
+                    LastName : "Bathina",
+                    Age : 22,
+                    Gender : "female"
+                },
+                {
+                    FirstName : "Smiley",
+                    LastName : "Chowdary",
+                    Age : 22,
+                    Gender : "female"
+                },
+                {
+                    FirstName : "Gopi",
+                    LastName : "Chowdary",
+                    Age : 25,
+                    Gender : "male"
+                },
+                {
+                    FirstName : "Mahesh",
+                    LastName : "Chowdary",
+                    Age : 25,
+                    Gender : "male"
+                },
+            ])
+            return (
+                <div>
+                    {
+                        <table border="1">
+                            <thead></thead>
+                            <tbody>
+                                {
+                                    x.map((a)=>{
+                                        return <tr style={(a.Gender==="female")?{backgroundColor:"pink"}:{backgroundColor:"blue"}}><td>{a.FirstName}</td><td>{a.LastName}</td><td>{a.Age}</td><td>{a.Gender}</td></tr>
+                                    })
+                                }
+                                
+                                
+                                
+                                </tbody>
+
+                            </table>
+                    }
+                   
+
+
+                    </div>
+            )
+        }
+        ReactDOM.render(<J/>,document.getElementById('d10'))
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

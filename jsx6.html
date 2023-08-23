@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="dd"></div>
+    <div id="df"></div>
+
+    <script type="text/babel">
+        var A = function abc(){
+            var [x,setx] = React.useState(
+                {
+                    firstname:"manasa",
+                    lastname:"bathina",
+                    age:22
+                }
+            )
+            return (
+                <div>
+                      
+                          <h1>Firstname:{x.firstname.toUpperCase()}</h1>
+                          <h1>Lastname:{x.lastname.toUpperCase()}</h1>
+                          <h1>Age:{x.age}</h1>
+                        
+                        
+                    
+                    </div>
+            )
+        }
+        ReactDOM.render(<A/>,document.getElementById('dd'))
+
+        var B = function abc(){
+            var [x,setx] = React.useState([
+                {
+                    firstname:"manasa",
+                    lastname:"bathina",
+                    age:22
+
+                },
+                {
+                    firstname:"keerthi",
+                    lastname:"chowdary",
+                    age:25
+
+                },
+                {
+                    firstname:"navya",
+                    lastname:"reddy",
+                    age:28
+
+                }
+            ])
+            return (
+                <div>
+                    {
+                        x.map((a)=>{
+                            return (
+                                <ul>
+                                    <li>{a.firstname}</li>
+                                    <li>{a.lastname}</li>
+                                    <li>{a.age}</li>
+
+
+
+                                    </ul>
+                            )
+                        })
+                    }
+                    
+                    </div>
+            )
+        }
+        ReactDOM.render(<B/>,document.getElementById('df'))
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="dd"></div>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <script type="text/babel">
+        var X = function abc(){
+            var [x,setx] = React.useState((14))
+            return (
+                <div>
+                    <h1>{Math.sqrt(x)}</h1>
+                    </div>
+            )
+
+        }
+        ReactDOM.render(<X/>,document.getElementById('dd'))
+
+        var Y = function def(){
+            var [y,sety] = React.useState((134.42))
+            return (
+                <div>
+                    <h1>{parseInt(y)}</h1>
+                    </div>
+            )
+        }
+        ReactDOM.render(<Y/>,document.getElementById('d1'))
+
+        var Z = function pqr(){
+            var [z,setz] = React.useState(("manasa"))
+            return (
+                <div>
+                    <h1>{z.toUpperCase()}</h1>
+                    </div>
+            )
+        }
+        ReactDOM.render(<Z/>,document.getElementById('d2'))
+
+        var A = function xyz(){
+            var [x,setx] = React.useState((60))
+            var [y,sety] = React.useState((20))
+
+            return (
+                <div>
+                    <h1>{x+y}</h1>
+                    </div>
+            )
+        }
+        ReactDOM.render(<A/>,document.getElementById('d3'))
+
+        var C = function xyz(){
+            var [x,setx] = React.useState((60))
+            var [y,sety] = React.useState((20))
+
+            return (
+                <div>
+                    <h1>{(x>y)?x:y}</h1>
+                    </div>
+            )
+        }
+        ReactDOM.render(<C/>,document.getElementById('d4'))
+
+        var B = function xyz(){
+            var [x,setx] = React.useState((+prompt()))
+            
+
+            return (
+                <div>
+                    <h1>{(x>0)?"positive":"negative"}</h1>
+                    </div>
+            )
+        }
+        ReactDOM.render(<B/>,document.getElementById('d5'))
+
+
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>
