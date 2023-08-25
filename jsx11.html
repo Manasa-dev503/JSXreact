@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <div id="d6"></div>
+    <div id="d7"></div>
+    <div id="d8"></div>
+    <script type="text/babel">
+        var X = function abc(){
+            function pqr(){
+                document.getElementById('dc').innerHTML=document.getElementById('da').value * document.getElementById('db').value
+            }
+            function mno(){
+                document.getElementById('dc').innerHTML=document.getElementById('da').value / document.getElementById('db').value
+
+            }
+            return (
+                <div>
+                <input type="text" id="da"/>
+                <input type="text" id="db"/><br/>
+                <button onClick={pqr}>Mul</button>
+                <button onClick={mno}>Div</button>
+                <h1 id="dc"></h1>
+
+
+            </div>
+                
+            )
+        }
+        ReactDOM.render(<X/>,document.getElementById('d1'))
+
+
+        var Y = function abc(){
+            function pqr(){
+                var x = parseInt(document.getElementById('dd').value)
+                var y = parseInt(document.getElementById('de').value)
+                document.getElementById('df').innerHTML= x + y
+            }
+            return (
+                <div>
+                <input type="text" id="dd"/>
+                <input type="text" id="de"/><br/>
+                <button onClick={pqr}>Add</button>
+                <h1 id="df"></h1>
+                </div>
+                )
+            }
+            ReactDOM.render(<Y/>,document.getElementById('d2'))
+
+
+            var Z = function abc(){
+                function pqr(){
+                    document.getElementById('di').innerHTML = document.getElementById('dg').value
+                }
+                function mno(){
+                    document.getElementById('di').innerHTML = document.getElementById('dh').value
+                }
+                return (
+                    <div>
+                        <input type="radio" id="dg" onChange={pqr} value="India" name="rad"/>IND
+                        <input type="radio" id="dh" onChange={mno} value="United State of America" name="rad"/>USA
+                        <h1 id="di"></h1>
+                    </div>
+                )
+            }
+            ReactDOM.render(<Z/>,document.getElementById('d3'))
+
+
+            var A = function abc(){
+                function pqr(){
+                    var mi = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCBnXFgkufz9WnF4rp4u_6zZ3mgVWTkOyb_A&usqp=CAU"
+                    document.getElementById('dn').innerHTML = mi
+                }
+                function mno(){
+                    var fi = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI_9lFCKQvwHUtznbvOyzFvgcdGy9pMXtYwQ&usqp=CAU"
+                    document.getElementById('dn').innerHTML = fi
+                }
+                return (
+                    <div>
+                        <input type="radio"  onChange={pqr}  name="rad"/>:Male
+                        <input type="radio"  onChange={mno}  name="rad"/>:Female
+                        <h1 id="dn"></h1>
+
+                    </div>
+                )
+            }
+            ReactDOM.render(<A/>,document.getElementById('d4'))
+
+            
+            var B = function abc(){
+                function pqr(){
+                    document.getElementById('do').innerHTML=document.getElementById('dp').value
+
+
+                }
+                return (
+                    <div>
+                        <select name="" id="dp" onChange={pqr}>
+                            <option value="IND">India</option>
+                            <option value="USA">United States of America</option>
+                            <option value="SRI">Srilanka</option>
+                        </select>
+                        <h1 id="do"></h1>
+                        </div>
+                )
+            }
+            ReactDOM.render(<B/>,document.getElementById('d5'))
+
+            var C = function abc(){
+                var [x,setx] = React.useState([])
+                function pqr(e){
+                    
+                    document.getElementById('dq').innerHTML=document.getElementById('dr').e.target.value
+
+
+                }
+                return (
+                    <div>
+                        <form action="" >
+                            <input type="checkbox" value="react" id="dr" name="check" onChange={()=>{pqr(e)}}/>:ReactJS <br/>
+                            <input type="checkbox" value="angular" id="dr"  name="check" onChange={()=>{pqr(e)}}/>:Angular <br/>
+                            <input type="checkbox" value="nodejs" id="dr" name="check" onChange={()=>{pqr(e)}}/>:NodeJS <br/>
+                            <input type="checkbox" value="express" id="dr" name="check" onChange={()=>{pqr(e)}}/>:Express <br/>
+                            <input type="checkbox" value="mongo" id="dr" name="check" onChange={()=>{pqr(e)}}/>:Mongodb <br/>
+                            <input type="checkbox" value="mongoose" id="dr" name="check" onChange={()=>{pqr(e)}}/>:Mongoose <br/>
+                            <input type="checkbox" value="mysql" id="dr" name="check" onChange={()=>{pqr(e)}}/>:MySQL <br/>
+                        </form>
+
+                        <h1 id="dq">{x}</h1>
+
+
+                        </div>
+                )
+            }
+            ReactDOM.render(<C/>,document.getElementById('d6'))
+
+
+            var D = function abc(){
+                function pqr(){
+                    document.getElementById('dr').innerHTML=1
+
+                }
+                function mno(){
+                    document.getElementById('dr').innerHTML=10
+
+                }
+                function ghi(){
+                    document.getElementById('dr').innerHTML=200
+
+
+                }
+                function klm(){
+                    document.getElementById('dr').innerHTML=9999
+
+                    
+                }
+                return (
+                    <div>
+                        <button onClick={pqr}>Button 1</button>
+                        <button onClick={mno}>Button 2</button>
+                        <button onClick={ghi}>Button 3</button>
+                        <button onClick={klm}>Button 4</button>
+                        <h1 id="dr"></h1>
+
+
+                        </div>
+                )
+            }
+            ReactDOM.render(<D/>,document.getElementById('d7'))
+
+            var E = function abc(){
+                function pqr(){
+                    document.getElementById('ds').innerHTML=document.getElementById('dt').value
+
+
+                }
+                return (
+                    <div>
+                        <input type="date" name="dat"  id="dt"/>
+                        <h1 id="ds"></h1>
+                        </div>
+                )
+            }
+            ReactDOM.render(<E/>,document.getElementById('d8'))
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

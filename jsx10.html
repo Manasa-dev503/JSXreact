@@ -8,6 +8,11 @@
 <body>
     <div id="d1"></div>
     <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <div id="d6"></div>
+    
     <script type="text/babel">
         var X = function abc(){
             function pqr(){
@@ -27,17 +32,85 @@
 
         var Y = function abc(){
             function mno(){
-                document.getElementById('df').innerHTML = document.getElementById('dd').value
+                document.getElementById('df').innerHTML = document.getElementById('dg').value
             }
             return (
                 <div>
-                    <input type="text" id="dd"/>
-                    <button onClick={mno}>Click here to see alert</button>
+                    <input type="text" id="dg" onKeyUp={mno}/>
+                    <button>Click here to see alert</button>
                     <h1 id="df"></h1>
                 </div>
                 )
         }
         ReactDOM.render(<Y/>,document.getElementById('d2'))
+
+        var Z = function abc(){
+            function mno(){
+                document.getElementById('dl').innerHTML = document.getElementById('dk').value.toUpperCase()
+            }
+            return (
+                <div>
+                    <input type="text" id="dk" onKeyUp={mno}/>
+                    <button>Click here to see alert</button>
+                    <h1 id="dl"></h1>
+                </div>
+                )
+        }
+        ReactDOM.render(<Z/>,document.getElementById('d3'))
+
+        var A = function abc(){
+            function mno(){
+                document.getElementById('dp').innerHTML = document.getElementById('do').value.toUpperCase()
+            }
+            function pqr(){
+                document.getElementById('do').value=""
+                document.getElementById('dp').innerHTML=""
+            }
+            return (
+                <div>
+                    <input type="text" id="do" onKeyUp={mno}/>
+                    <button onClick={pqr}>Clear Text</button>
+                    <h1 id="dp"></h1>
+                </div>
+                )
+        }
+        ReactDOM.render(<A/>,document.getElementById('d4'))
+
+        var B = function abc(){
+            function mno(){
+                document.getElementById('db').innerHTML = document.getElementById('da').value
+            }
+            function pqr(){
+                document.getElementById('db').innerHTML = document.getElementById('da').value.toUpperCase()
+            }
+            return (
+                <div>
+                    <input type="text" id="da" onKeyUp={mno}/>
+                    <button onClick={pqr}>Click here to see Uppercase</button>
+                    <h1 id="db"></h1>
+                </div>
+                )
+        }
+        ReactDOM.render(<B/>,document.getElementById('d5'))
+
+        var C = function abc(){
+            function mno(){
+                document.getElementById('d11').innerHTML = document.getElementById('din').value
+            }
+            return (
+                <div>
+                    <input type="text" id="din" onKeyUp={mno}/>
+                    <h1 id="d11"></h1>
+                </div>
+                )
+        }
+        ReactDOM.render(<C/>,document.getElementById('d6'))
+
+
+        
+
+
+
 
     </script>
     
