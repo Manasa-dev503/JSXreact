@@ -14,6 +14,7 @@
     <div id="d6"></div>
     <div id="d7"></div>
     <div id="d8"></div>
+    <div id="d9"></div>
     <script type="text/babel">
         var X = function abc(){
             function pqr(){
@@ -77,18 +78,18 @@
 
             var A = function abc(){
                 function pqr(){
-                    var mi = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCBnXFgkufz9WnF4rp4u_6zZ3mgVWTkOyb_A&usqp=CAU"
+                    var mi = <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCBnXFgkufz9WnF4rp4u_6zZ3mgVWTkOyb_A&usqp=CAU"/>
                     document.getElementById('dn').innerHTML = mi
                 }
                 function mno(){
-                    var fi = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI_9lFCKQvwHUtznbvOyzFvgcdGy9pMXtYwQ&usqp=CAU"
+                    var fi = <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI_9lFCKQvwHUtznbvOyzFvgcdGy9pMXtYwQ&usqp=CAU"/>
                     document.getElementById('dn').innerHTML = fi
                 }
                 return (
                     <div>
                         <input type="radio"  onChange={pqr}  name="rad"/>:Male
                         <input type="radio"  onChange={mno}  name="rad"/>:Female
-                        <h1 id="dn"></h1>
+                        <div id="dn"></div>
 
                     </div>
                 )
@@ -117,25 +118,23 @@
 
             var C = function abc(){
                 var [x,setx] = React.useState([])
-                function pqr(e){
+                function pqr(){
                     
-                    document.getElementById('dq').innerHTML=document.getElementById('dr').e.target.value
-
-
+                    document.getElementById('dq').innerHTML=document.getElementById('dr').value
                 }
                 return (
                     <div>
                         <form action="" >
-                            <input type="checkbox" value="react" id="dr" name="check" onChange={()=>{pqr(e)}}/>:ReactJS <br/>
-                            <input type="checkbox" value="angular" id="dr"  name="check" onChange={()=>{pqr(e)}}/>:Angular <br/>
-                            <input type="checkbox" value="nodejs" id="dr" name="check" onChange={()=>{pqr(e)}}/>:NodeJS <br/>
-                            <input type="checkbox" value="express" id="dr" name="check" onChange={()=>{pqr(e)}}/>:Express <br/>
-                            <input type="checkbox" value="mongo" id="dr" name="check" onChange={()=>{pqr(e)}}/>:Mongodb <br/>
-                            <input type="checkbox" value="mongoose" id="dr" name="check" onChange={()=>{pqr(e)}}/>:Mongoose <br/>
-                            <input type="checkbox" value="mysql" id="dr" name="check" onChange={()=>{pqr(e)}}/>:MySQL <br/>
+                            <input type="checkbox" value="react" id="dr" name="check" onChange={pqr}/>:ReactJS <br/>
+                            <input type="checkbox" value="angular" id="dr"  name="check" onChange={pqr}/>:Angular <br/>
+                            <input type="checkbox" value="nodejs" id="dr" name="check" onChange={pqr}/>:NodeJS <br/>
+                            <input type="checkbox" value="express" id="dr" name="check" onChange={pqr}/>:Express <br/>
+                            <input type="checkbox" value="mongo" id="dr" name="check" onChange={pqr}/>:Mongodb <br/>
+                            <input type="checkbox" value="mongoose" id="dr" name="check" onChange={pqr}/>:Mongoose <br/>
+                            <input type="checkbox" value="mysql" id="dr" name="check" onChange={pqr}/>:MySQL <br/>
                         </form>
 
-                        <h1 id="dq">{x}</h1>
+                        <h1 id="dq"></h1>
 
 
                         </div>
@@ -185,13 +184,14 @@
                 }
                 return (
                     <div>
-                        <input type="date" name="dat"  id="dt"/>
+                        <input type="date" name="dat" onChange={pqr} id="dt"/>
                         <h1 id="ds"></h1>
                         </div>
                 )
             }
             ReactDOM.render(<E/>,document.getElementById('d8'))
 
+            
 
 
 
